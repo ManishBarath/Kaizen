@@ -62,12 +62,12 @@ export const Auth = () => {
                     <div className="hidden lg:flex flex-col justify-between p-10 bg-blue-50 text-slate-900  ">
                         <div>
                             <div className="flex items-center gap-3">
-                                <div className="h-12 w-12 rounded-2xl bg-white text-slate-800 flex items-center justify-center  ">
+                                <div className="h-12 w-12 rounded-2xl bg-white text-slate-800 flex items-center justify-center ">
                                     <Flame className="h-6 w-6" />
                                 </div>
                                 <div>
-                                    <p className="text-xs uppercase tracking-[0.2em] text-slate-500 ">Habit Tracker</p>
-                                    <h1 className="text-2xl font-extrabold tracking-tight">Build momentum daily</h1>
+                                    <p className="text-sm font-black uppercase tracking-[0.3em] bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Kaizen</p>
+                                    <h1 className="text-2xl font-extrabold tracking-tight mt-1">Build momentum daily</h1>
                                 </div>
                             </div>
                             <p className="mt-6 text-sm text-slate-600 leading-relaxed ">
