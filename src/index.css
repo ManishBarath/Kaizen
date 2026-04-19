@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    background-color: var(--color-slate-50);
+    color: var(--color-slate-900);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Core light overrides for white/black/blue preference */
+  :root {
+    color-scheme: light;
+    --color-slate-50: #ffffff; /* Pure white background */
+    --color-slate-100: #f4f4f5; /* Very light gray for panels */
+    --color-slate-200: #e4e4e7;
+    --color-slate-800: #27272a;
+    --color-slate-900: #000000; /* Pure black text */
+  }
+
+  html.dark {
+    color-scheme: dark;
+    /* Pure Black & White high contrast theme */
+    --color-slate-900: #ffffff; /* Pure white text */
+    --color-slate-800: #f4f4f5; 
+    --color-slate-700: #e4e4e7; 
+    --color-slate-600: #d4d4d8; 
+    --color-slate-500: #a1a1aa; 
+    --color-slate-400: #71717a; 
+    --color-slate-300: #52525b; 
+    --color-slate-200: #3f3f46; 
+    
+    /* Deep blacks for backgrounds */
+    --color-slate-100: #18181b; /* Dark gray for panels */
+    --color-slate-50: #09090b;  /* Almost pure black background */
+    --color-white: #18181b;     /* Remap white to dark grey */
+    --color-black: #ffffff;     /* Remap black to pure white */
+
+    /* Make the tracking colors extremely subtle dark grays so the grid looks unified and clean instead of jarringly dark */
+    --color-red-50: #121214;
+    --color-red-100: #18181b;
+    --color-amber-50: #131316;
+    --color-amber-100: #1a1a1e;
+    --color-lime-50: #131416;
+    --color-lime-100: #1a1b1e;
+    --color-emerald-50: #121415;
+    --color-emerald-100: #171a1c;
+    --color-teal-50: #121516;
+    --color-teal-100: #171b1d;
+    --color-purple-50: #151316;
+    --color-purple-100: #1c1a1e;
+    --color-pink-50: #161214;
+    --color-pink-100: #1d181b;
+    
+    /* Blues stay distinctly blue but balanced over the black background */
+    --color-blue-50: #0f172a;
+    --color-blue-100: #1e293b;
+    --color-indigo-50: #1e1b4b;
+    --color-indigo-100: #312e81;
+  }
+
+  html.dark body {
+    color: var(--color-slate-900);
+    background-color: var(--color-slate-50);
+  }
+}
