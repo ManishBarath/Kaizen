@@ -56,25 +56,25 @@ export const Auth = () => {
     };
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-sky-50 via-blue-50 to-indigo-100 dark:bg-slate-950 px-4 py-10 sm:px-6 lg:px-10 flex items-center justify-center">
-            <div className="w-full max-w-5xl overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800 bg-white shadow-[0_25px_60px_rgba(15,23,42,0.12)]">
+        <div className="min-h-screen bg-linear-to-br from-sky-50 via-blue-50 to-indigo-100  px-4 py-10 sm:px-6 lg:px-10 flex items-center justify-center">
+            <div className="w-full max-w-5xl overflow-hidden rounded-3xl border border-slate-200  bg-white shadow-[0_25px_60px_rgba(15,23,42,0.12)]">
                 <div className="grid lg:grid-cols-2">
-                    <div className="hidden lg:flex flex-col justify-between p-10 bg-blue-50 text-slate-900 dark:bg-slate-900 dark:text-white">
+                    <div className="hidden lg:flex flex-col justify-between p-10 bg-blue-50 text-slate-900  ">
                         <div>
                             <div className="flex items-center gap-3">
-                                <div className="h-12 w-12 rounded-2xl bg-white text-slate-800 flex items-center justify-center dark:bg-white dark:text-white">
+                                <div className="h-12 w-12 rounded-2xl bg-white text-slate-800 flex items-center justify-center  ">
                                     <Flame className="h-6 w-6" />
                                 </div>
                                 <div>
-                                    <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-white">Habit Tracker</p>
+                                    <p className="text-xs uppercase tracking-[0.2em] text-slate-500 ">Habit Tracker</p>
                                     <h1 className="text-2xl font-extrabold tracking-tight">Build momentum daily</h1>
                                 </div>
                             </div>
-                            <p className="mt-6 text-sm text-slate-600 leading-relaxed dark:text-white">
+                            <p className="mt-6 text-sm text-slate-600 leading-relaxed ">
                                 A clean, focused system to plan habits, measure progress, and stay consistent.
                             </p>
                         </div>
-                        <div className="space-y-3 text-sm text-slate-600 dark:text-white">
+                        <div className="space-y-3 text-sm text-slate-600 ">
                             <div className="flex items-center gap-2">
                                 <span className="h-2 w-2 rounded-full bg-blue-500" />
                                 Weekly goals aligned with outcomes
@@ -92,12 +92,12 @@ export const Auth = () => {
 
                     <div className="p-8 sm:p-10">
                         <div className="flex items-center gap-3">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-blue-700 dark:text-blue-300">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-blue-700 ">
                                 <Flame className="h-6 w-6" />
                             </div>
                             <div>
                                 <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Welcome</p>
-                                <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+                                <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 ">
                                     {isLogin ? 'Sign in to your space' : 'Create your account'}
                                 </h2>
                             </div>
@@ -112,24 +112,24 @@ export const Auth = () => {
 
                             <div className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Email address</label>
+                                    <label className="block text-sm font-semibold text-slate-700 ">Email address</label>
                                     <input
                                         type="email"
                                         required
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        className="mt-2 block w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-sm text-slate-900 dark:text-white shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900/40"
+                                        className="mt-2 block w-full rounded-xl border border-slate-200  bg-white  px-4 py-3 text-sm text-slate-900  shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 :ring-blue-900/40"
                                         placeholder="email"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Password</label>
+                                    <label className="block text-sm font-semibold text-slate-700 ">Password</label>
                                     <input
                                         type="password"
                                         required
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
-                                        className="mt-2 block w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 px-4 py-3 text-sm text-slate-900 dark:text-white shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900/40"
+                                        className="mt-2 block w-full rounded-xl border border-slate-200  bg-white  px-4 py-3 text-sm text-slate-900  shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 :ring-blue-900/40"
                                         placeholder="••••••••"
                                     />
                                 </div>
@@ -138,7 +138,7 @@ export const Auth = () => {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="group relative flex w-full justify-center rounded-xl bg-blue-600 py-3.5 px-4 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700"
+                                className="group relative flex w-full justify-center rounded-xl bg-blue-600 py-3.5 px-4 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 disabled:opacity-50  :bg-blue-700"
                             >
                                 {loading ? (
                                     <Loader2 className="h-5 w-5 animate-spin" />
@@ -152,10 +152,10 @@ export const Auth = () => {
 
                             <div className="relative mt-6 flex items-center justify-center">
                                 <div className="absolute inset-0 flex items-center" aria-hidden="true">
-                                    <div className="w-full border-t border-slate-200 dark:border-slate-700"></div>
+                                    <div className="w-full border-t border-slate-200 "></div>
                                 </div>
                                 <div className="relative flex justify-center text-xs font-semibold uppercase tracking-[0.2em]">
-                                    <span className="bg-white dark:bg-slate-900 px-4 text-slate-400">Or continue with</span>
+                                    <span className="bg-white  px-4 text-slate-400">Or continue with</span>
                                 </div>
                             </div>
 
@@ -164,7 +164,7 @@ export const Auth = () => {
                                     onSuccess={handleGoogleSuccess}
                                     onError={() => setError('Google Login Failed')}
                                     useOneTap
-                                    theme="filled_black"
+                                    theme="outline"
                                     shape="pill"
                                 />
                             </div>

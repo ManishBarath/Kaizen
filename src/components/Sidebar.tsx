@@ -1,29 +1,15 @@
-import { CalendarRange, Calendar, ChevronLeft, ChevronRight, Activity, StickyNote, Moon, Sun, LogOut } from 'lucide-react';
+import { CalendarRange, Calendar, ChevronLeft, ChevronRight, Activity, StickyNote, LogOut } from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 export const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains('dark'));
   const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem('USER_ID');
     // Clear any other auth tokens here if needed
     navigate('/auth');
-  };
-
-  const toggleDark = () => {
-    const root = document.documentElement;
-    if (root.classList.contains('dark')) {
-      root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDark(false);
-    } else {
-      root.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      setIsDark(true);
-    }
   };
 
   const items = [
@@ -90,14 +76,6 @@ export const Sidebar = () => {
           title="Logout"
         >
           <LogOut className="w-5 h-5" />
-        </button>
-
-        <button 
-          onClick={toggleDark}
-          className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors w-full flex justify-center"
-          title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        >
-          {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
         </button>
 
         <button 
